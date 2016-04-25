@@ -8,7 +8,7 @@ import argparse, csv, psycopg2
 
 def main():
 
-    # Parse args (service, file size)
+    # Parse args (result string)
     parser = argparse.ArgumentParser(description='speedtest result as csv')
     parser.add_argument('result_str', type=str, nargs=1)
     parseResult = parser.parse_args()
