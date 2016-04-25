@@ -4,8 +4,11 @@
 Dependencies required for running speedtests are listed in requirements.txt. Run the following to download them (in a virtualenv if you prefer):
 > pip install -r requirements.txt
 
+Speedtests also require the speedtest-cli-extras library, which can be downloaded with:
+> git clone https://github.com/HenrikBengtsson/speedtest-cli-extras
+
 This repo contains the following scripts:
-* **capture.sh** - initiates capture of packets sent/recvd by the machine on which it is run, recording traces in files labeled data.<datetime>.pcap. Also records bandwidth consumption by the local machine at 1ms intervals in a file called data.<datetime>.bw.log. Assumes only one network interface is active.
+* **capture.sh** - initiates capture of packets sent/recvd by the machine on which it is run, recording traces in files labeled data.{datetime}.pcap. Also records bandwidth consumption by the local machine at 1ms intervals in a file called data.{datetime}.bw.log. Assumes only one network interface is active.
 * **speedtest.sh** - performs one speedtest, logging results in a remote postgresql database. Requires that the dependencies listed in requirements.txt and speedtest-cli-extras are installed (see above).
 
 Data from past trials is in the data folder. This currently includes the following tests:
